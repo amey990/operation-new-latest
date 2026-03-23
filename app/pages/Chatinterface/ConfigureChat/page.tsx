@@ -529,7 +529,7 @@ export default function AgentChatPage() {
   if (!active) return null;
 
   return (
-    <Box sx={{ display:'flex', width:'100vw', height:'100vh', bgcolor:BG, overflow:'hidden' }} onDragStart={e => { const id = (e.target as HTMLElement).closest('[draggable]')?.getAttribute('data-id'); if (id) setDraggingId(id); }} onDragEnd={() => setDraggingId(null)}>
+    <Box sx={{ display:'flex', width:'100vw', height:'100vh', bgcolor:'background.default', color:'text.primary', overflow:'hidden', transition:'background-color 0.3s ease, color 0.3s ease' }} onDragStart={e => { const id = (e.target as HTMLElement).closest('[draggable]')?.getAttribute('data-id'); if (id) setDraggingId(id); }} onDragEnd={() => setDraggingId(null)}>
 
       {/* ── Left Panel ── */}
       <Box sx={{ width:260, flexShrink:0, borderRight:`1px solid ${BORDER}`, display:'flex', flexDirection:'column', height:'100vh' }}>

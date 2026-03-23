@@ -548,7 +548,7 @@ export default function KnowledgeCenterPage(): React.ReactElement {
   function handleDelete(pid:string) { const rest=projects.filter(p=>p.id!==pid); setProjects(rest); setSelectedId(rest[0]?.id??''); }
 
   return (
-    <Box sx={{ display:'flex',width:'100vw',height:'100vh',overflow:'hidden', transition:'background 0.3s ease' }}>
+    <Box sx={{ display:'flex',width:'100vw',height:'100vh',overflow:'hidden', bgcolor: 'background.default', color: 'text.primary', transition:'background-color 0.3s ease, color 0.3s ease' }}>
       <Sidebar onCollapseChange={setSidebarCollapsed} />
       <Box sx={{ flex:1,display:'flex',flexDirection:'column',height:'100vh',overflow:'hidden',marginLeft:`${sidebarW}px`,transition:'margin-left 0.28s cubic-bezier(0.4,0,0.2,1)' }}>
         <Navbar sidebarCollapsed={sidebarCollapsed} />

@@ -361,7 +361,7 @@ export default function AgentsPage(): React.ReactElement {
   };
 
   return (
-    <Box sx={{ display: 'flex', width: '100vw', height: '100vh', overflow: 'hidden' }}>
+    <Box sx={{ display: 'flex', width: '100vw', height: '100vh', overflow: 'hidden', bgcolor: 'background.default', color: 'text.primary', transition: 'background-color 0.3s ease, color 0.3s ease' }}>
       {navLoading && <HamsterLoaderOverlay label={navLabel} />}
 
       <Sidebar onCollapseChange={setSidebarCollapsed} />

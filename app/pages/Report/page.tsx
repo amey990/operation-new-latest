@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 export default function Reports(): React.ReactElement {
   
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', bgcolor: 'background.default', color: 'text.primary', transition: 'background-color 0.3s ease, color 0.3s ease' }}>
       
       <Box sx={{ flexGrow: 1 }}>
         

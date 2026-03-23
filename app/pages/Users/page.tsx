@@ -623,7 +623,7 @@ export default function UsersPage(): React.ReactElement {
   const openNewRole  = ()          => { setEditingRole(undefined); setShowRoleBuilder(true); };
 
   return (
-    <Box sx={{ display: 'flex', width: '100vw', height: '100vh', overflow: 'hidden', }}>
+    <Box sx={{ display: 'flex', width: '100vw', height: '100vh', overflow: 'hidden', bgcolor: 'background.default', color: 'text.primary', transition: 'background-color 0.3s ease, color 0.3s ease' }}>
       {showCreateUser  && <CreateUserModal roles={roles} onClose={() => setShowCreateUser(false)} />}
       {showRoleBuilder && <RoleBuilderModal editing={editingRole} onClose={() => { setShowRoleBuilder(false); setEditingRole(undefined); }} onSave={handleSaveRole} />}
 
